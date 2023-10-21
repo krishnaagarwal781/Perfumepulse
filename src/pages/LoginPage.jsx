@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TopNavbar from "../components/TopNavbar";
 import styled from "styled-components";
 import SignUpForm from "../components/checkout/SignUpForm";
@@ -6,13 +6,6 @@ import LoginForm from "../components/checkout/LoginForm";
 import Footer from "../components/Footer";
 
 const Wrapper = styled.div`
-  /* display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-flow: row wrap;
-  margin: auto;
-  gap: 5rem;
-  padding: 40px 50px; */
   display: grid;
   grid-template-columns: repeat(2, minmax(1px, auto));
   gap: 8rem;

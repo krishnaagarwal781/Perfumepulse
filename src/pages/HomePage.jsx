@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import ScentennialsSays from "../components/home/ScentennialsSays";
 import SmellDifferent from "../components/home/SmellDifferent";
 import FeaturedOn from "../components/home/FeaturedOn";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = styled.section`
   width: 100%;
@@ -106,12 +106,6 @@ const StartNowButton = styled.button`
 `;
 
 const HomePage = () => {
-  const images = [
-    "https://www.scentsesandco.com.sg/static/media/montblanclegendeaudetoilette.b3b1c8126f604297e5f9.webp",
-    "https://www.scentsesandco.com.sg/static/media/FSAUVAGE.d268bd6e01e68bc18110.webp",
-    "https://www.scentsesandco.com.sg/static/media/FULTRAMALE.07163e1932ce74f50875.webp",
-    "https://www.scentsesandco.com.sg/static/media/FSAUVAGE.d268bd6e01e68bc18110.webp",
-  ];
   const navigate = useNavigate();
 
   return (
