@@ -27,7 +27,6 @@ const Title = styled.div`
 `;
 
 const Faqs = () => {
-  const [show, setShow] = useState(false);
   const [openedIndex, setOpenedIndex] = useState(-1);
 
   const handleOpen = (currentIndex) => {
