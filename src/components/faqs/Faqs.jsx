@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { faqsData } from "./faqsData.js";
+import { faqsData } from "./FaqsData.js";
 import FaqItem from "./FaqItem.jsx";
 
 const Wrapper = styled.div`
@@ -25,7 +25,7 @@ const Title = styled.div`
   text-align: center;
   margin: 15px 0;
 `;
-
+//addded
 const Faqs = () => {
   const [openedIndex, setOpenedIndex] = useState(-1);
 
