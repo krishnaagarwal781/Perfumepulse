@@ -1,4 +1,4 @@
-export const faqsData = {
+export const FaqsDataMain = {
     general: [
         {
             question: "What is Scentses + Co? How does it work",

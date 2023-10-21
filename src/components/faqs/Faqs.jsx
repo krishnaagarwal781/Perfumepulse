@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { faqsData } from "./FaqsData.js";
 import FaqItem from "./FaqItem.jsx";
+import { FaqsDataMain } from "./FaqsDataMain.js";
 
 const Wrapper = styled.div`
   max-width: 1200px;
@@ -43,7 +43,7 @@ const Faqs = () => {
         <MainTitle>Frequently Asked Questions</MainTitle>
         <section>
           <Title>GENERAL</Title>
-          {faqsData.general.map((data, itemIndex) => (
+          {FaqsDataMain.general.map((data, itemIndex) => (
             <FaqItem
               key={itemIndex}
               data={data}
@@ -55,11 +55,11 @@ const Faqs = () => {
         </section>
         <section>
           <Title>SUBSCRIPTION</Title>
-          {faqsData.subscription.map((data, itemIndex) => (
+          {FaqsDataMain.subscription.map((data, itemIndex) => (
             <FaqItem
               key={itemIndex}
               data={data}
-              itemIndex={itemIndex + faqsData.general.length}
+              itemIndex={itemIndex + FaqsDataMain.general.length}
               openedIndex={openedIndex}
               handleOpen={handleOpen}
             />
@@ -67,11 +67,11 @@ const Faqs = () => {
         </section>
         <section>
           <Title>PRICING</Title>
-          {faqsData.pricing.map((data, itemIndex) => (
+          {FaqsDataMain.pricing.map((data, itemIndex) => (
             <FaqItem
               key={itemIndex}
               data={data}
-              itemIndex={itemIndex + faqsData.subscription.length}
+              itemIndex={itemIndex + FaqsDataMain.subscription.length}
               openedIndex={openedIndex}
               handleOpen={handleOpen}
             />
@@ -79,11 +79,11 @@ const Faqs = () => {
         </section>
         <section>
           <Title>REFUNDS AND RETURNS</Title>
-          {faqsData.refundsReturns.map((data, itemIndex) => (
+          {FaqsDataMain.refundsReturns.map((data, itemIndex) => (
             <FaqItem
               key={itemIndex}
               data={data}
-              itemIndex={itemIndex + faqsData.pricing.length}
+              itemIndex={itemIndex + FaqsDataMain.pricing.length}
               openedIndex={openedIndex}
               handleOpen={handleOpen}
             />
