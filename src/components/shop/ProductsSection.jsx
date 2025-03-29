@@ -4,7 +4,7 @@ import { travelCaseItems } from "./data.js";
 import CustomPagination from "./CustomPagination.jsx";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { data } from "../../data.js";
 const Wrapper = styled.section`
   margin: 0 80px;
 
@@ -91,13 +91,13 @@ const ProductsSection = () => {
   return (
     <Wrapper>
       <Container>
-        {shopProducts.map((product, index) => (
+        {data.map((product, index) => (
           <ProductItem key={index} to={`/product/${product.id}`}>
             <div className="img-box">
               <img src={product.image} alt="Product Image" />
             </div>
-            <Title>{product.title}</Title>
-            <Price>&#3647; {`${product.price_travel}`}</Price>
+            <Title>{product.name}</Title>
+            <Price>&#3647; {`${product.price}`}</Price>
           </ProductItem>
         ))}
       </Container>

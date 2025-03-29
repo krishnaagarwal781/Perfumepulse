@@ -169,14 +169,14 @@ const ProductItem = ({
           backgroundColor: isProductSelected() ? "#FDEFD8" : "#fff",
         }}
       >
-        {product.extra_price !== 0 && (
+        {product.price !== 0 && (
           <div className="extra-price">{`${
-            product.extra_price > 0 ? "+" : "-"
-          } ฿ ${Math.abs(product.extra_price)}.00`}</div>
+            product.price > 0 ? "+" : "-"
+          } ฿ ${Math.abs(product.price)}.00`}</div>
         )}
         <div className="header">
-          <img className="image" src={product.image} alt={product.title} />
-          <div className="product-title">{product.title}</div>
+          <img className="image" src={product.image} alt={product.name} />
+          <div className="product-title">{product.name}</div>
         </div>
         <DetailButton className="detail-button" onClick={handleDetailClick}>
           Details

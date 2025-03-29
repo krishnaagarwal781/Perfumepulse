@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductItem from "./ProductItem";
 import { ProductContext } from "../context/ProductContext";
-
+import { data } from "../data";
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(0px, 1fr));
@@ -69,7 +69,7 @@ const Products = ({ searchKeyword, removedProduct, setRemovedProduct }) => {
       {loading ? (
         <div className="loader"></div>
       ) : (
-        displayData?.map((product) => (
+        data?.map((product) => (
           <ProductItem
             key={product.id}
             product={product}
